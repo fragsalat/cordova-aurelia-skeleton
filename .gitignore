@@ -1,0 +1,6 @@
+node_modules
+src/jspm_packages
+.idea
+.DS_STORE
+www
+build/reports

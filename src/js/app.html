@@ -1,0 +1,12 @@
+<template>
+    <nav>
+        <ul>
+            <li repeat.for="entry of router.navigation">
+                <a href.bind="entry.href">${entry.title}${entry.isActive ? '!' : ''}</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="content">
+        <router-view></router-view>
+    </section>
+</template>
