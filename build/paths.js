@@ -1,14 +1,17 @@
-var path = require('path');
-
-var appRoot = 'src/';
+var appRoot = 'src/app/';
 var outputRoot = 'www/';
+var exportSrvRoot = 'export/';
 
 module.exports = {
   root: appRoot,
-  source: [appRoot + '**/*.js', '!**/jspm_packages/**', '!**/config.js'],
-  html: [appRoot + '**/*.html', '!**/jspm_packages/**'],
-  css: appRoot + '**/*.css',
-  style: 'styles/**/*.css',
+  source: appRoot + '**/*.js',
+  html: appRoot + '**/*.html',
+  style: appRoot + '../styles/**/*.scss',
   output: outputRoot,
-  doc:'./doc'
+  jsOutput: outputRoot + 'app',
+  styleOutput: outputRoot + 'style',
+  exportSrv: exportSrvRoot,
+  doc: './doc',
+  e2eSpecsSrc: 'test/e2e/src/**/*.js',
+  e2eSpecsDist: 'test/e2e/dist/'
 };
